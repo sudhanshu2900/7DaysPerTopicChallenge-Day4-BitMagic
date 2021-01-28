@@ -1,0 +1,35 @@
+Count Number of set bit in a given number.
+
+PROBLEM: I/P- N=6
+         O/P- 2
+         
+         Explain: Binary representation of 6 is 110.
+
+
+
+  
+SOLUTION: 
+
+
+    int setBits(int N)
+    {
+        return (__builtin_popcount(N));
+    }
+
+
+
+----------------OR---------------------
+
+
+    int setBits(int N)
+    {
+        int cnt=0;
+        while(N!=0){
+            if((N&1)!=0){
+                cnt++;
+            }
+            N=(N>>1);
+        }
+        return cnt;
+    }
+         
